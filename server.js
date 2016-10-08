@@ -8,7 +8,7 @@ var articleone={
     title:'article-one|ankit nautiyal',
     heading:'article-one',
     date:'8/10/2016',
-    content:`p>
+    content:`<p>
             This is content for my first article.This is content for my first article.This is content for my first article.
              This is content for my first article.This is content for my first article.This is content for my first article.
              This is content for my first article.This is content for my first article.This is content for my first article.
