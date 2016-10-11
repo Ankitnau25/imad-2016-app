@@ -34,7 +34,7 @@ button.onclick = function (){
      };
              //not done yet
                //make a request
- request.open('GET','http://ankitnau25.imad.hasura-app.io/counter',true);
+ request.open('GET', 'http://ankitnau25.imad.hasura-app.io/counter',true);
  request.send(null);
 };
 
