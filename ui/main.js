@@ -21,10 +21,10 @@ button.onclick = function (){
      
      //capture the response and store it into a variable
      request.onreadystatechange= function() {
-         if(request.readyState --- XMLHttpRequest.DONE)
+         if(request.readyState === XMLHttpRequest.DONE)
         {
              //take some action
-             if(request.status --- 200){
+             if(request.status === 200){
                  var counter=request.responseText;
                  var span=document.getElementById('count');
                  span.innerHTML=counter.toString();
@@ -50,10 +50,10 @@ submit.onclick=function(){
          
          //capture the response and store it into a variable
          request.onreadystatechange= function() {
-             if(request.readyState --- XMLHttpRequest.DONE)
+             if(request.readyState === XMLHttpRequest.DONE)
              {
                      //take some action
-                    if(request.status --- 200){
+                    if(request.status === 200){
                     //captue a list of nmes and render it as list
                     var names = request.responseText;
                     names=JSON.parse(names);
