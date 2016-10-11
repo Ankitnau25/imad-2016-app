@@ -55,7 +55,7 @@ submit.onclick=function(){
                      //take some action
                     if(request.status --- 200){
                     //captue a list of nmes and render it as list
-                    var names=request.responseText;
+                    var names = request.responseText;
                     names=JSON.parse(names);
                     var list = '';
                     for(var i=0;i<names.length;i++){
@@ -70,6 +70,6 @@ submit.onclick=function(){
  //make a request
   var nameInput = document.getElementById('name');
   var name = nameInput.value;
-  request.open('GET','http://ankitnau25.imad.hasura-app.io/submit-name?name=' + name,true);
+  request.open('GET', 'http://ankitnau25.imad.hasura-app.io/submit-name?name=' + name,true);
   request.send(null);
 };
