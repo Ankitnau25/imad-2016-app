@@ -12,6 +12,44 @@ img.onclick=function(){
    // img.style.marginLeft='100px';
 };*/ 
 //counter code
+//random quote genrator
+$(document).ready(function() {
+     var quote;
+    var author;
+function getNewQuote(){
+
+  $.ajax({
+    url: 'http://api.forismatic.com/api/1.0/',
+    jsonp:'jsonp',
+    dataType:'jsonp',
+    data:{
+        method:'getQuote',
+        lang:'en',
+        format:'jsonp'
+    },
+    success: function(response){
+    //console.log(response.quoteText);
+    quote=response.quoteText;
+    author=response.quoteAuthor;
+    var text = quote + ' - ' + author;
+    $('#qwe').text(quote);
+    if (author){
+        $('#author').text('said by '+author );
+    }
+    else
+        $('#author').text('unknown');
+  }
+  });
+}
+  getNewQuote();
+$("#lvie").on('click',function(event){
+    event.preventDefault();
+getNewQuote();
+});
+
+  });
+
+
 var button=document.getElementById('counter');
 
 button.onclick = function (){
