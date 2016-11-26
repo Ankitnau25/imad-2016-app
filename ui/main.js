@@ -28,16 +28,11 @@ function getNewQuote(){
         format:'jsonp'
     },
     success: function(response){
-    //console.log(response.quoteText);
+    console.log(response.quoteText);
     quote=response.quoteText;
     author=response.quoteAuthor;
     var text = quote + ' - ' + author;
     $('#qwe').text(quote);
-    if (author){
-        $('#author').text('said by '+author );
-    }
-    else
-        $('#author').text('unknown');
   }
   });
 }
