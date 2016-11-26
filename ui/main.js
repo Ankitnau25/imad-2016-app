@@ -41,6 +41,11 @@ $("#lvie").on('click',function(event){
     event.preventDefault();
 getNewQuote();
 });
+ $("#twto").on('click',function(event){
+    event.preventDefault();
+    s=quote;
+    window.open(('https://twitter.com/intent/tweet?text='+encodeURIComponent(s)));
+});
 
   });
 
